@@ -8,6 +8,11 @@ button.addEventListener('click', (e) =>{
       obtenerPokemon();
 });
 
+
+setInterval(() => {
+   obtenerPokemon();
+}, 30000);
+
 function obtenerPokemon(){
    let id = Math.round(Math.random() * 150);
    const url=`https://pokeapi.co/api/v2/pokemon/`+id;
